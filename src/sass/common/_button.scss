@@ -1,0 +1,68 @@
+// _buttons.scss
+
+// Button Variables
+
+@import '../mixins/mixins'; 
+@import '../common/shadows'; 
+// Base Button Styles
+.button {
+  display: inline-block;
+  padding: $btn-padding;
+  border: none;
+  border-radius: $btn-border-radius;
+  height: $btn-height;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: $btn-transition;
+  @include shadow($shadow-light);
+  &.primary {
+    background-color: $btn-primary-color;
+ 
+    
+    &:hover {
+      background-color: darken($btn-primary-color, 10%);
+    }
+  }
+
+  &.secondary {
+    background-color: $btn-secondary-color;
+    
+    &:hover {
+      background-color: darken($btn-secondary-color, 10%);
+    }
+  }
+
+  &.danger {
+    background-color: $btn-danger-color;
+
+    &:hover {
+      background-color: darken($btn-danger-color, 10%);
+    }
+  }
+
+  &.warning {
+    background-color: $btn-warning-color;
+
+    &:hover {
+      background-color: darken($btn-warning-color, 10%);
+    }
+  }
+
+  &.disabled {
+    background-color: gray;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: gray;
+    }
+}
+
+// Specific Button Types
+.submit-btn {
+  @extend .button; // Extend the base button styles
+  @extend .primary; // Use the primary button styles
+}
+}

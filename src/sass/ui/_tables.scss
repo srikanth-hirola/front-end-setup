@@ -1,0 +1,115 @@
+// _table.scss
+
+@import '../mixins/mixins'; 
+
+.table-main {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  
+  // Apply borders to the table
+  border: 1px solid $table-border-color;
+
+  th, td {
+    border: 1px solid $table-border-color;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: $font-size-base; // Use your defined base font size
+  }
+
+  th {
+    background-color: $table-header-bg;
+    font-weight: bold;
+    color: $text-color;
+    
+    // Add some styles for th cells
+    &:first-child {
+      border-top-left-radius: 8px;
+    }
+    &:last-child {
+      border-top-right-radius: 8px;
+    }
+  }
+
+  tbody {
+    tr {
+      &:hover {
+        background-color: $table-row-hover-bg; // Change background on hover
+      }
+
+      &.highlighted {
+        background-color: #e6f7ff; // Highlighted row style
+      }
+      
+      td {
+        // Different styles for specific td classes
+        &.status {
+          font-weight: bold;
+        }
+
+        &.actions {
+          text-align: center;
+          .action-button {
+            padding: 6px 12px;
+            border-radius: 4px;
+            background-color: $primary-color;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+              background-color: darken($primary-color, 10%); // Darken on hover
+            }
+          }
+        }
+        
+        // Define additional styles for specific types
+        &.tag {
+          padding: 5px 10px;
+          border-radius: 12px;
+          font-size: 12px;
+          display: inline-block;
+          margin: 2px 0;
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
+
+// Tag Styles
+.tag-info {
+  background-color: $info-color;
+  color: white;
+}
+
+.tag-success {
+  background-color: $secondary-color;
+  color: white;
+}
+
+.tag-danger {
+  background-color: $danger-color;
+  color: white;
+}
+
+.tag-warning {
+  background-color: $warning-color;
+  color: white;
+}
+
+.tag-default {
+  background-color: #ccc; // Default tag style
+  color: #333;
+}
+
+.tag-primary {
+  background-color: $primary-color;
+  color: white;
+}
+
+.tag-small {
+  font-size: 10px; // Smaller tag style
+  padding: 3px 6px;
+}

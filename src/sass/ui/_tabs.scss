@@ -1,0 +1,36 @@
+/* CustomTabs.scss */
+.custom-tabs {
+    width: 100%;
+    margin: 20px 0;
+  
+    .tab-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 16px;
+  
+      button {
+        background-color: #f0f0f0;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &.active {
+          background-color: #009cf1;
+          color: white;
+        }
+  
+        &:hover {
+          background-color: #e0e0e0;
+        }
+      }
+    }
+  
+    .tab-content {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #ffffff;
+    }
+  }
+  

@@ -1,0 +1,87 @@
+// Define font styles as mixins
+@mixin poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  @mixin poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  @mixin poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @mixin poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @mixin poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @mixin poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @mixin poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @mixin poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  @mixin poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  // Apply globally to text elements based on usage
+  h1 {
+    @include poppins-bold;
+  }
+  
+  h2 {
+    @include poppins-semibold;
+  }
+  
+  h3 {
+    @include poppins-medium;
+  }
+  
+  p {
+    @include poppins-regular;
+  }
+  
+  small {
+    @include poppins-light;
+  }
+  
+  // Utility classes
+  .poppins-thin { @include poppins-thin; }
+  .poppins-extralight { @include poppins-extralight; }
+  .poppins-light { @include poppins-light; }
+  .poppins-regular { @include poppins-regular; }
+  .poppins-medium { @include poppins-medium; }
+  .poppins-semibold { @include poppins-semibold; }
+  .poppins-bold { @include poppins-bold; }
+  .poppins-extrabold { @include poppins-extrabold; }
+  .poppins-black { @include poppins-black; }
+  

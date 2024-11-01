@@ -1,0 +1,66 @@
+// _mixins.scss
+
+// Color Variables
+$primary-color: #1890ff;
+$secondary-color: #52c41a;
+$danger-color: #f5222d;
+$warning-color: #faad14;
+$info-color: #1890ff;
+$text-color: #333;
+// Input Variables
+$input-padding: 10px 15px;
+$input-border-radius: 4px;
+$input-border-color: #d9d9d9; // Light gray border color
+$input-focus-border-color: #1890ff; // Primary color on focus
+$input-placeholder-color: #bfbfbf; // Placeholder color
+$input-shadow-color: rgba(0, 0, 0, 0.1); // Shadow color
+$input-shadow: 0 2px 5px $input-shadow-color; // Shadow effect
+$select-padding: 10px 15px;
+$select-border-radius: 4px;
+$select-border-color: #d9d9d9; // Light gray border
+$select-focus-border-color: #1890ff; // Focus color
+$toggle-width: 50px; // Width for toggle
+$toggle-height: 24px; // Height for toggle
+$checkbox-size: 20px; // Size for checkbox
+$checkbox-border-color: #d9d9d9; // Checkbox border color
+// Font Variables
+$font-family: 'Helvetica Neue', Arial, sans-serif;
+$font-size-base: 16px;
+$btn-padding: 10px 20px;
+$btn-border-radius: 4px;
+$btn-height: 40px;
+$btn-font-size: 16px;
+$btn-font-weight: 600;
+
+$btn-primary-color: #1890ff;
+$btn-secondary-color: #52c41a;
+$btn-danger-color: #ff0845;
+$btn-warning-color: #faad14;
+
+$btn-transition: all 0.3s ease;
+
+// Table Styles
+$table-border-color: #d9d9d9; // Light gray border color
+$table-header-bg: #f0f2f5; // Light background for headers
+$table-row-hover-bg: #fafafa; // Background for hovered rows    
+// Text Mixins
+@mixin text-style($color: $text-color, $size: $font-size-base, $weight: normal) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $font-family;
+}
+
+// Font Size Mixins
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+// Color Mixins
+@mixin background-color($color) {
+  background-color: $color;
+}
+
+@mixin border-color($color) {
+  border-color: $color;
+}
